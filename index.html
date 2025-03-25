@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        
+        header {
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 20px;
+        }
+
+        .link-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        
+        .button {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 16px;
+            background-color: rgb(0, 0, 0);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .button:hover {
+            background-color: rgb(135, 135, 135);
+        }
+        
+        .button svg {
+            margin-right: 8px;
+            fill: currentColor;
+        }
+
+        
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: rgb(144, 127, 98);
+        }
+        
+        h2 {
+            font-size: 2.3em;
+            color: rgb(144, 127, 98);
+            margin-top: 25px;
+            padding-bottom: 5px;
+            /* border-bottom: 1px solid #eee; */
+        }
+
+        h3 {
+            font-size: 1.7em;
+            color: rgb(0, 0, 0);
+            margin-top: 25px;
+            padding-bottom: 5px;
+            /* border-bottom: 1px solid #eee; */
+        }
+
+        h4 {
+            font-size: 1.3em;
+            color: rgb(0, 0, 0);
+            margin-top: 25px;
+            padding-bottom: 5px;
+            /* border-bottom: 1px solid #eee; */
+        }
+
+        p {
+            font-size: 1.2em;
+            font-weight: 100;
+            color: rgb(118, 118, 118);
+            margin: 5px 10px 5px 10px;
+            /* padding-bottom: 5px; */
+            /* border-bottom: 1px solid #eee; */
+        }
+        
+        .authors {
+            text-align: center;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+        
+        .organization {
+            text-align: center;
+            font-style: italic;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+        
+        .conference {
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+        
+        .abstract {
+            background-color: #f9f9f9;
+            padding: 5px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        
+        .results-media {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 20px 0;
+            justify-content: center;
+        }
+        
+        .media-item {
+            flex: 1 1 300px;
+            max-width: 1000px;
+            margin: 0 0 20px 0;
+        }
+        
+        .media-item img, 
+        .media-item video {
+            max-width: 100%;
+            border: 1px solid #eee;
+            border-radius: 3px;
+            display: block;
+        }
+        
+        .media-item video {
+            background-color: #000;
+        }
+        
+        figcaption {
+            font-size: 0.9em;
+            text-align: center;
+            padding: 8px 5px;
+        }
+        
+        .result-subsection {
+            margin-top: 25px;
+        }
+        
+        /* Video controls styling */
+        video::-webkit-media-controls-panel {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+
+        .citation-section {
+            margin-top: 30px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+        
+        /* Responsive adjustments */
+        @media screen and (max-width: 600px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            h2 {
+                font-size: 1.3em;
+            }
+
+            h3 {
+                font-size: 1.0em;
+            }
+
+            h4 {
+                font-size: 0.8em;
+            }
+            
+            .media-item {
+                flex: 1 1 100%;
+            }
+
+            .button {
+                padding: 6px 12px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Semantic Consistent Language Gaussian Splatting <br> for Point-Level Open-vocabulary Querying</h1>
+        <div class="authors"><a href="https://evelinyin.github.io/homepage.git.io/">Hairong Yin</a><sup>1</sup>,   <a href="https://huangying-zhan.github.io/">Huangying Zhan</a><sup>2</sup>,  <a href="https://www.linkedin.com/in/yi-xu-42654823/">Yi Xu</a><sup>2</sup>,  <a href="https://raymond-yeh.com/">Raymond A. Yeh</a><sup>1</sup></div>
+        <div class="organization"><sup>1</sup>Purdue University, <sup>2</sup>Goertech Alpha Labs</div>
+
+        <div class="link-buttons">
+            <a href=" " class="button" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                </svg>
+                Paper PDF
+            </a>
+            
+            <a href=" " class="button" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+                GitHub Code
+            </a>
+        </div>
+
+    </header>
+
+
+
+
+    
+    <main>
+        <section id="abstract">
+            <h2>Abstract</h2>
+            <div class="abstract">
+                <p>Open-vocabulary querying in 3D Gaussian Splatting aims to identify semantically relevant regions within a 3D Gaussian representation based on a given text query. 
+                    Prior work, such as LangSplat, addressed this task by retrieving these regions in the form of segmentation masks on 2D renderings.
+                    More recently, OpenGaussian introduced point-level querying, which directly selects a subset of 3D Gaussians. In this work, we propose a point-level querying method that builds upon LangSplat's framework. 
+                    Our approach improves the framework in two key ways: (a) we leverage masklets from the Segment Anything Model 2 (SAM2) to establish semantic consistent ground-truth for distilling the language Gaussians; 
+                    (b) we introduces a novel two-step querying approach that first retrieves the distilled ground-truth and subsequently uses the ground-truth to query the individual Gaussians. 
+                    Experimental evaluations on three benchmark datasets demonstrate that the proposed method achieves better performance compared to state-of-the-art approaches. 
+                    For instance, our method achieves an mIoU improvement of +20.42 on the 3D-OVS dataset.</p>
+            </div>
+        </section>
+        
+        <section id="method">
+            <h2>Method</h2>
+            <div class="results-media">
+                <figure class="media-item">
+                    <img src="./assets/images/pipelinev5.png" alt="Method Figure">
+                    <!-- <figcaption>Figure 1: [Brief description of the first result image]</figcaption> -->
+                </figure>
+            </div>
+
+            <p> We introduce a method for generating semantic and 3D-consistent ground-truth to train language-aware Gaussians. 
+                With this improved 3D language Gaussians, we propose an effective two-step querying process by leveraging the created consistent ground-truth.
+
+            </p>
+            
+        </section>
+        
+        <section id="qualitative-results">
+            <h2>Qualitative Results</h2>
+            
+            <div class="result-subsection">
+                <center>
+                    <h3>Language Embeddings "GT" on Scene of Ramen in LERF (RGB, LangSplat, Ours)</h3>
+                </center>
+                <div class="results-media">
+                    <figure class="media-item">
+                        <video controls>
+                            <source src="./assets/videos/ramen_gt_all.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </figure>
+                </div>
+                
+                <center>
+                <h4>Query Text: "napkin"  (GaussianGrouping, LangSplat, OpenGaussian, Ours) </h4>
+                </center>
+
+                <div class="results-media">
+                    <figure class="media-item">
+                        <video controls>
+                            <source src="./assets/videos/napkin_all.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </figure>
+                </div>
+            </div>
+
+            <div></div>
+            <br> <!-- Adds a line break -->
+            <br> <!-- Adds a line break -->
+            <br> <!-- Adds a line break -->
+            <div></div>
+
+            
+            <center>
+                <h3>Language Embeddings "GT" on Scene of Figurines in LERF (RGB, LangSplat, Ours)</h3>
+            </center>
+            <div class="results-media">
+                <figure class="media-item">
+                    <video controls>
+                        <source src="./assets/videos/figurines_gt_all.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </figure>
+            </div>
+
+            <center>
+                <h4>Query Text: "rubics cube"  (GaussianGrouping, LangSplat, OpenGaussian, Ours) </h4>
+            </center>
+
+            <div class="results-media">
+                <figure class="media-item">
+                    <video controls>
+                        <source src="./assets/videos/cube_all.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </figure>
+            </div>
+        </div>
+
+
+        <div></div>
+        <br> <!-- Adds a line break -->
+        <br> <!-- Adds a line break -->
+        <br> <!-- Adds a line break -->
+        <div></div>
+
+        <center>
+            <h3>Language Embeddings "GT" on Scene of Room in 3DOVS (RGB, LangSplat, Ours)</h3>
+        </center>
+        <div class="results-media">
+            <figure class="media-item">
+                <video controls>
+                    <source src="./assets/videos/figurines_gt_all.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </figure>
+        </div>
+        
+        <center>
+            <h4>Query Text: "baseball"  (GaussianGrouping, LangSplat, OpenGaussian, Ours) </h4>
+        </center>
+
+        <div class="results-media">
+            <figure class="media-item">
+                <video controls>
+                    <source src="./assets/videos/cube_all.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </figure>
+        </div>
+        </div>
+
+        <div></div>
+        <br> <!-- Adds a line break -->
+        <br> <!-- Adds a line break -->
+        <br> <!-- Adds a line break -->
+        <div></div>
+
+        <center>
+            <h3>Language Embeddings "GT" on Scene of Bed in 3DOVS (RGB, LangSplat, Ours)</h3>
+        </center>
+        <div class="results-media">
+            <figure class="media-item">
+                <video controls>
+                    <source src="./assets/videos/bed_gt_all.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </figure>
+        </div>
+        
+        <center>
+            <h4>Query Text: "red bag"  (GaussianGrouping, LangSplat, OpenGaussian, Ours) </h4>
+        </center>
+
+        <div class="results-media">
+            <figure class="media-item">
+                <video controls>
+                    <source src="./assets/videos/red_bag_all.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </figure>
+        </div>
+        </div>
+
+
+            
+            
+    
+        </section>
+
+        <section id="quantitative-results">
+            <h2>Quantitative Results</h2>
+            
+            <div class="result-subsection">
+                <div class="results-media">
+                    <figure class="media-item">
+                        <img src="./assets/images/lerf_3dovs_tab.png" alt="Lerf Tab Figure">
+                        <img src="./assets/images/replica_tab.png" alt="Replica Tab Figure">
+
+                    </figure>
+                </div>
+            </div>
+        
+
+
+        
+        <!-- <section id="citations" class="citation-section">
+            <h2>Citations</h2>
+            <pre style="background-color: #f9f9f9; padding: 15px; border-radius: 5px; overflow-x: auto; font-size: 18px;">
+            @inproceedings{citation_key2,
+            author    = {Author Name and Another Author},
+            title     = {Title of the Conference Paper},
+            booktitle = {Proceedings of the Conference Name},
+            year      = {2025}
+            }
+            </pre>
+        </section> -->
+
+        <p id="footnote-1">#: Part of this work was done while the first three authors were with OPPO US Research Center.</p>
+    </section>
+
+            
+            
+    
+        </section>
+    </main>
+</body>
+</html>
